@@ -1,0 +1,24 @@
+ALGORITHM read_a_sentence
+VAR
+    x : STRING
+    xLength, xVowels : INTEGER:= 0;
+    xWords : INTEGER:=1;
+    i : INTEGER;
+BEGIN
+    Read(x);
+    Read(xLength);
+    Read(xWords);
+    Read(xVowels);
+    FOR i FROM 0 TO x.length DO
+        xLength := xlength + 1
+        IF(x[i]:=" ") THEN
+            xWords := xWords + 1;
+        END_IF
+        IF(x[i]==("a"||"o"||"i"||"e"||"u"||"A"||"O"||"I"||"E"||"U")) THEN
+            xVowels := xVowels + 1;
+        END_IF
+    END_FOR
+    Write(xLength)
+    Write(xWords)
+    Write(xVowels)
+END
